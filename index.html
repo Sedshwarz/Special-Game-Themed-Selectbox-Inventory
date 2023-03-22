@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css">
+  <title>Special Selectbox Inventory</title>
+</head>
+
+<body class="redTheme">
+  <div class="bg"></div>
+
+  <div class="wrap">
+    <button class="open">Inventory</button>
+
+    <div class="inventory">
+      <div class="circle">
+
+        <div class="infoCircle">
+          <h4 id="header"></h4>
+          <span id="detail"></span>
+          <span id="divider"></span>
+          <span id="effect"></span>
+        </div>
+
+        <div class="cursorCircle"></div>
+
+        <svg style="position: absolute">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="">
+                <animate attributeName="stop-color" values="#049aa5;#29fcd9;#57bac7;#049aa5" dur="1.3s"
+                  repeatCount="indefinite" />
+              </stop>
+              <stop offset="100%" stop-color="">
+                <animate attributeName="stop-color" values="#35d1c9;#3dc4ec;#1fb3ab;#35d1c9" dur="1.3s"
+                  repeatCount="indefinite" />
+              </stop>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="item" style="--x: 0; --y: -505px; --rot: 0deg; --delay: 0.3s;">
+          <svg>
+            <path onmouseover="hoverItem(1,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/1.png" height="30" width="150" />
+          <span class="quantity" style="--x: 115px; --y: 95px;">6/25</span>
+        </div>
+
+        <div class="item" style="--x: 455px; --y: -225px; --rot: 64deg; --delay: 0.35s;">
+          <svg>
+            <path onmouseover="hoverItem(2,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/2.png" height="40" width="104" style="transform: rotate(-64deg) rotateY(180deg);" />
+          <span class="quantity" style="--x: 130px; --y: 90px; transform: rotate(-64deg);">4/40</span>
+        </div>
+
+        <div class="item" style="--x: 440px; --y: 270px; --rot: 120deg; --delay: 0.4s;">
+          <svg>
+            <path onmouseover="hoverItem(3,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/3.png" height="100" width="40" style="transform: rotate(-120deg);" />
+          <span class="quantity" style="--x: 130px; --y: 90px; transform: rotate(-120deg);">1/1</span>
+        </div>
+
+        <div class="item" style="--x: 0; --y: 520px; --rot: 180deg; --delay: 0.45s;">
+          <svg>
+            <path onmouseover="hoverItem(4,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/4.png" height="60" width="104" style="transform: rotate(-180deg); margin-top: -35px;" />
+          <span class="quantity" style="--x: 115px; --y: 95px; transform: rotate(-180deg);">6/14</span>
+        </div>
+
+        <div class="item" style="--x: -440px; --y: 270px; --rot: -121deg; --delay: 0.5s;">
+          <svg>
+            <path onmouseover="hoverItem(5,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/5.png" height="80" width="50" style="transform: rotate(121deg); margin: -15px 0 0 -5px" />
+          <span class="quantity" style="--x: -128px; --y: 95px; transform: rotate(121deg);">1/4</span>
+        </div>
+
+        <div class="item" style="--x: -455px; --y: -225px; --rot: -64deg; --delay: 0.55s;">
+          <svg>
+            <path onmouseover="hoverItem(6,this)" onmouseout="hoverBreak()" onclick="closeInventory()"
+              d="M 0 25 C 125 -7.5 125 -7.5 250 25 L 200 150 C 125 125 125 125 50 150 L 0 25"></path>
+          </svg>
+
+          <div class="line-effect upside-down">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+          <div class="line-effect">
+            <div class="lfx line1"></div>
+            <div class="lfx line2"></div>
+            <div class="lfx line3"></div>
+          </div>
+
+          <img src="doc/6.png" height="48" width="85" style="transform: rotate(64deg); margin: -25px 5px 0 0" />
+          <span class="quantity" style="--x: -138px; --y: 97px; transform: rotate(64deg);">6/14</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="themeContainer">
+    <div class="theme activeTheme" style="--clr: #67e7c1" onclick="changeTheme('green', this)"></div>
+    <div class="theme" style="--clr: #f56f6b" onclick="changeTheme('red', this)"></div>
+    <div class="theme" style="--clr: #9a5deb" onclick="changeTheme('purple', this)"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
